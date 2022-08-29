@@ -23,6 +23,8 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 8006
+      nodeSelector:
+        service: "facuxfdz-worker"
 
 ---
 
