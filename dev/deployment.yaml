@@ -4,7 +4,6 @@ metadata:
   name: example-app
   labels:
     app: example-app
-  namespace: facuxfdz
 spec:
   selector:
     matchLabels:
