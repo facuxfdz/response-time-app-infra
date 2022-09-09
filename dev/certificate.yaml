@@ -1,0 +1,10 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: facuxfdz-app-tls
+  namespace: facuxfdz
+spec:
+  secretName: facuxfdz-app-tls
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer

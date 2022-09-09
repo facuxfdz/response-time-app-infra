@@ -8,12 +8,9 @@ metadata:
     cert-manager.io/cluster-issuer: "letsencrypt-staging"
 spec:
   tls:
-    - hosts:
-      - facuxfdz.com
-      secretName: facuxfdz-app-tls
+    - secretName: facuxfdz-app-tls
   rules:
-  - host: facuxfdz.com
-    http:
+  - http:
       paths:
       - pathType: Prefix
         path: "/"
