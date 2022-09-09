@@ -4,6 +4,8 @@ metadata:
   name: facuxfdz-app-tls
   namespace: facuxfdz
 spec:
+  dnsNames:
+    - facuxfdz.com
   secretName: facuxfdz-app-tls
   issuerRef:
     name: letsencrypt-staging
