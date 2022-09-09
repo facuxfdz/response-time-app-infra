@@ -12,7 +12,8 @@ spec:
       - facuxfdz.com
       secretName: facuxfdz-app-tls
   rules:
-  - http:
+  - host: facuxfdz.com
+    http:
       paths:
       - pathType: Prefix
         path: "/"
