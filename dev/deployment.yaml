@@ -15,17 +15,15 @@ spec:
         app: example-app
     spec:
       containers:
-      - name: myapp
-        image: facuxfdz/example:v1.1.0
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 8006
-
+        - name: myapp
+          image: facuxfdz/example-app:28c107e
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8006
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -36,7 +34,10 @@ spec:
   selector:
     app: example-app
   ports:
-  - name: web
-    port: 8006
-    targetPort: 8006
-
+    - name: web
+      port: 8006
+      targetPort: 8006
+  template:
+    spec:
+      containers:
+        - image: facuxfdz/example-app:28c107e
