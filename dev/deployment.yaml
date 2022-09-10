@@ -15,11 +15,11 @@ spec:
         app: example-app
     spec:
       containers:
-      - name: myapp
-        image: facuxfdz/example:v1.1.0
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 8006
+        - name: myapp
+          image: facuxfdz/example-app:28c107e
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8006
